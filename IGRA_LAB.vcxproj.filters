@@ -36,6 +36,9 @@
     <ClInclude Include="Vector2f.h">
       <Filter>Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Vector2f.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
       <Filter>Utilities</Filter>
     </ClCompile>
   </ItemGroup>
