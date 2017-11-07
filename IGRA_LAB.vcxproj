@@ -145,8 +145,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Colour.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="IGRA_LAB.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="stdafx.h" />
@@ -154,8 +156,10 @@
     <ClInclude Include="Vector2f.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Colour.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="IGRA_LAB.cpp" />
+    <ClCompile Include="Random.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
