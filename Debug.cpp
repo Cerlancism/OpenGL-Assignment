@@ -2,10 +2,9 @@
 #include "stdafx.h"
 #include "WinBase.h"
 
-void Debug::Log(std::wstring log)
+void Debug::Log(std::string log)
 {
-	auto output = log.c_str();
-	OutputDebugStringW(output);
+	OutputDebugStringA(log.c_str());
 	OutputDebugStringA("\n");
 }
 
@@ -15,11 +14,10 @@ void Debug::Log(char a[])
 	OutputDebugStringA("\n");
 }
 
-void Debug::Log(char a[], std::wstring log)
+void Debug::Log(char a[], std::string log)
 {
 	OutputDebugStringA(a);
 	OutputDebugStringA(" : ");
-	auto output = log.c_str();
-	OutputDebugStringW(output);
+	OutputDebugStringA(log.c_str());
 	OutputDebugStringA("\n");
 }

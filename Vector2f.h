@@ -5,10 +5,10 @@ public:
 	Vector2f();
 	Vector2f(float x, float y);
 
-	static void ConvertMouseCoordinates(int x, int y, int width, int height);
+	static void ConvertMouseCoordinates(int x, int y, int width, int height, bool isCLick);
 
-	float X = 0;
-	float Y = 0;
+	float X;
+	float Y;
 
 	static const Vector2f Top;
 
