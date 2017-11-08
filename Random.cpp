@@ -3,11 +3,18 @@
 
 int Random::RandomRange(int start, int end)
 {
-	int overflowrange = 1 + (end - start) / RAND_MAX;
-	return start + (rand() * overflowrange) % (end - start);
+	float normalised = (float)rand() / (float)RAND_MAX;
+	return start + int((end - start + 1) * normalised);
 }
 
-int Random::RandomRange(float start, float end)
+float Random::RandomRange(float start, float end)
 {
-	return 0;
+	float normalised = (float)rand() / (float)RAND_MAX;
+	return start + (end - start) * normalised;
+}
+
+float Random::RandomFloatNormal()
+{
+	float normalised = (float)rand() / (float)RAND_MAX;
+	return normalised;
 }

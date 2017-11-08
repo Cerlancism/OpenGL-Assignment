@@ -1,10 +1,15 @@
 #include "stdafx.h"
 #include "Shape.h"
 
+Shape::Shape(ShapeType type, Colour colour, Fill fillmode, Size size)
+{
 
-Shape::Shape()
-{ }
+}
 
+void Shape::Draw()
+{}
 
 Shape::~Shape()
-{}
+{
+
+}

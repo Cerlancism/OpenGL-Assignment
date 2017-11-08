@@ -28,12 +28,18 @@ void Vector2f::ConvertMouseCoordinates(int x, int y, int width, int height, bool
 	if (isCLick)
 	{
 		Debug::Log("Mouse Position", MousePosition.ToString());
-		Debug::Log("Random Number", to_string(Random::RandomRange(0, 10)));
+		Debug::Log("Color Random", Colour::Random().ToString());
 	}
 }
 std::string Vector2f::ToString()
 {
 	return to_string(X) + " " + to_string(Y);;
+}
+
+Vector2f operator+(Vector2f left, Vector2f right)
+{
+	Vector2f result = Vector2f();
+	return result;
 }
 
 

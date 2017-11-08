@@ -12,7 +12,8 @@ public:
 	static const Colour BLUE;
 	static const Colour YELLOW;
 
-	Colour Random();
+	static Colour Random();
+	static Colour RandomAny();
 	std::string ToString();
 
 	Colour();

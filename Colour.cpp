@@ -21,7 +21,26 @@ Colour::Colour(float red, float green, float blue)
 
 Colour Colour::Random()
 {
-	return Colour();
+	switch (Random::RandomRange(1 , 4))
+	{
+		case 1:
+			return Colour::RED;
+
+		case 2:
+			return Colour::GREEN;
+
+		case 3:
+			return Colour::BLUE;
+
+		case 4:
+			return Colour::YELLOW;
+	}
+	return Colour::BLACK;
+}
+
+Colour Colour::RandomAny()
+{
+	return Colour(Random::RandomFloatNormal(), Random::RandomFloatNormal(), Random::RandomFloatNormal());
 }
 
 std::string Colour::ToString()
