@@ -12,10 +12,10 @@ public:
 	~Square();
 
 private:
-	Vector2f topLeft = Vector2f(-1, 1);
-	Vector2f topright = Vector2f(1, 1);
-	Vector2f bottomleft = Vector2f(-1, -1);
-	Vector2f bottomright = Vector2f(1, -1);
+	Vector2f topLeft = Vector2f(-1.0f, 1.0f);
+	Vector2f topright = Vector2f(1.0f, 1.0f);
+	Vector2f bottomleft = Vector2f(-1.0f, -1.0f);
+	Vector2f bottomright = Vector2f(1.0f, -1.0f);
 
 	float lineWidth = 2;
 };

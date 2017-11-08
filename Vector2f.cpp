@@ -21,8 +21,8 @@ Vector2f::Vector2f(float x, float y)
 void Vector2f::ConvertMouseCoordinates(int x, int y, int width, int height)
 {
 	//Normalise pixels and fix offsets
-	float normalisexWinPos = x * 2.0f * (400.0f / 383.0f) / width;
-	float normaliseyWinPos = y * 2.0f * (400.0f / 340.0f) / height;
+	float normalisexWinPos = x * 2.0f / width;
+	float normaliseyWinPos = (y + 60) * 2.0f / height;
 	MousePosition.X = normalisexWinPos > 1 ? normalisexWinPos - 1 : 0 - (1 - normalisexWinPos);
 	MousePosition.Y = normaliseyWinPos > 1 ? ((0 - (1 - normaliseyWinPos)) * -1) : abs(normaliseyWinPos - 1);
 	Debug::Log("Mouse Position", MousePosition.ToString());
