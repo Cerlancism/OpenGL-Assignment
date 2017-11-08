@@ -43,6 +43,14 @@ Colour Colour::RandomAny()
 	return Colour(Random::RandomFloatNormal(), Random::RandomFloatNormal(), Random::RandomFloatNormal());
 }
 
+void Colour::FadetoWhite()
+{
+	float rate = 0.01f;
+	Red = Red + rate >= 1 ? 1 : Red + rate;
+	Green = Green + rate >= 1 ? 1 : Green + rate;
+	Blue = Blue + rate >= 1 ? 1 : Blue + rate;
+}
+
 std::string Colour::ToString()
 {
 	return to_string(Red) + " " + to_string(Green) + " " + to_string(Blue);

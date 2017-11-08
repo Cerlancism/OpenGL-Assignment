@@ -14,6 +14,7 @@ public:
 
 	static Colour Random();
 	static Colour RandomAny();
+	void FadetoWhite();
 	std::string ToString();
 
 	Colour();
