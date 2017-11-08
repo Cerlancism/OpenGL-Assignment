@@ -1,15 +1,13 @@
 #include "stdafx.h"
 #include "Square.h"
 
-vector<Square> Square::List;
-
 Square::Square(ShapeType type, Colour colour, bool isfilled, float size)
 {
-	position = Vector2f::MousePosition;
 	Type = type;
 	ShapeColour = colour;
 	IsFilled = isfilled;
 	ShapeSize = size;
+	lineWidth = ShapeSize < 0.1 ? 1 : 2;
 
 	topLeft = topLeft * ShapeSize + position;
 	topright = topright * ShapeSize + position;
@@ -20,13 +18,12 @@ Square::Square(ShapeType type, Colour colour, bool isfilled, float size)
 void Square::Draw()
 {
 	glLineWidth(lineWidth);
-	glBegin(IsFilled ? GL_LINE_STRIP : GL_POLYGON);
+	glBegin(IsFilled ? GL_POLYGON : GL_LINE_LOOP);
 	glColor3f(ShapeColour.Red, ShapeColour.Green, ShapeColour.Blue);
 	glVertex2f(topLeft.X, topLeft.Y);
 	glVertex2f(topright.X, topright.Y);
 	glVertex2f(bottomright.X, bottomright.Y);
 	glVertex2f(bottomleft.X, bottomleft.Y);
-	glVertex2f(topLeft.X, topLeft.Y);
 	glEnd();
 }
 

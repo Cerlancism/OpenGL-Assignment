@@ -10,9 +10,11 @@ public:
 	enum class Fill { FILLED, WIREFRAME, RANDOM };
 	enum class Size { SMALL, MEDIUM, LARGE, RANDOM, RANDOMANY};
 
+	static std::vector<Shape*> List;
+
 	ShapeType Type;
 	Colour ShapeColour;
-	Vector2f position;
+	Vector2f position = Vector2f::MousePosition;
 	bool IsFilled;
 	float ShapeSize;
 

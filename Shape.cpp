@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "Shape.h"
 #include "Square.h"
+#include "Triangle.h"
+#include "Circle.h"
+
+std::vector<Shape*> Shape::List;
 
 Shape::Shape()
 {
@@ -12,7 +16,12 @@ Shape::Shape(ShapeType type, Colour colour, Fill fillmode, Size size)
 
 	bool isfill = false;
 	float sizevalue = 0.1f;
-	float sizepool[] = { 0.1f, 0.2f, 0.4f };
+	float sizepool[] = { 0.02f, 0.06f, 0.12f };
+
+	if (type == ShapeType::RANDOM)
+	{
+		type = (ShapeType)Random::RandomRange(0, 2);
+	}
 
 	switch (fillmode)
 	{
@@ -42,29 +51,27 @@ Shape::Shape(ShapeType type, Colour colour, Fill fillmode, Size size)
 			sizevalue = sizepool[Random::RandomRange(0, 2)];
 			break;
 		case Size::RANDOMANY:
-			sizevalue = Random::RandomRange(0.1f, 0.5f);
+			sizevalue = Random::RandomRange(0.01f, 0.5f);
 			break;
 	}
-	Square newsquare(type, colour, isfill, sizevalue);
 	switch (type)
 	{
 		case ShapeType::SQURE:
-			Square::List.push_back(newsquare);
+			List.push_back(new Square(type, colour, isfill, sizevalue));
 			break;
 
 		case ShapeType::TRIANGLE:
+			List.push_back(new Triangle(type, colour, isfill, sizevalue));
 			break;
 
 		case ShapeType::CIRCLE:
-			break;
-
-		case ShapeType::RANDOM:
+			List.push_back(new Circle(type, colour, isfill, sizevalue, false));
 			break;
 
 		case ShapeType::RANDOMANY:
+			List.push_back(new Circle(type, colour, isfill, sizevalue, true));
 			break;
 	}
-	this->~Shape();
 }
 
 void Shape::Draw()
