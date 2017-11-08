@@ -1,11 +1,11 @@
 #include "stdafx.h"
 #include "Colour.h"
 
-const Colour Colour::BLACK = Colour(0, 0, 0);
-const Colour Colour::RED = Colour(1, 0, 0);
-const Colour Colour::GREEN = Colour(0, 1, 0);
-const Colour Colour::BLUE = Colour(0, 0, 1);
-const Colour Colour::YELLOW = Colour(1, 1, 0);
+const Colour Colour::BLACK(0, 0, 0);
+const Colour Colour::RED(1, 0, 0);
+const Colour Colour::GREEN(0, 1, 0);
+const Colour Colour::BLUE(0, 0, 1);
+const Colour Colour::YELLOW(1, 1, 0);
 
 Colour::Colour()
 {

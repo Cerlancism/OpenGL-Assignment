@@ -1,4 +1,8 @@
 #pragma once
+#include <vector>
+#include <gl\GL.h>
+#include <gl\GLU.h>
+
 class Shape
 {
 public:
@@ -7,10 +11,12 @@ public:
 	enum class Size { SMALL, MEDIUM, LARGE, RANDOM, RANDOMANY};
 
 	ShapeType Type;
+	Colour ShapeColour;
 	Vector2f position;
 	bool IsFilled;
-	float size;
+	float ShapeSize;
 
+	Shape();
 	Shape(ShapeType type, Colour colour, Fill fillmode, Size size);
 
 	virtual void Draw();
