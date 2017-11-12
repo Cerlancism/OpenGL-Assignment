@@ -1,4 +1,5 @@
 #pragma once
+//Random number generation ultility
 class Random
 {
 public:

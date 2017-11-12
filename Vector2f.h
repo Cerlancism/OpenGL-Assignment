@@ -1,9 +1,9 @@
 #pragma once
+//Vector class to store 2 floats values of X and Y
 class Vector2f
 {
 public:
-	static const Vector2f Top;
-
+	//Global holder for current mouse position
 	static Vector2f MousePosition;
 
 	float X;
@@ -11,17 +11,14 @@ public:
 
 	Vector2f();
 	Vector2f(float x, float y);
-
+	//Update mouse position to GL coordinates
 	static void ConvertMouseCoordinates(int x, int y, int width, int height);
-
-	std::string ToString()
-	{
-		return std::to_string(X) + " " + std::to_string(Y);
-	}
+	//Get a string representation for debug
+	std::string ToString();
 
 	~Vector2f();
 };
-
+//Define vector operator behaviours
 Vector2f operator+(Vector2f left, Vector2f right);
 
 Vector2f operator-(Vector2f left, Vector2f right);

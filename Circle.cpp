@@ -8,11 +8,11 @@ Circle::Circle(ShapeType type, Colour colour, bool isfilled, float size, bool is
 	IsFilled = isfilled;
 	ShapeSize = size;
 	lineWidth = ShapeSize < 0.1 ? 1 : 2;
-
+	//Constructed a perfect circle
 	if (!isdistorted)
 	{
 		vertices.clear();
-		int definition = ShapeSize * 320 + 8;
+		int definition = ShapeSize * 320 + 8; //Circle definition based on size
 		float angularstep = 360.0f / definition;
 		for (size_t i = 0; i < definition; i++)
 		{
@@ -22,7 +22,7 @@ Circle::Circle(ShapeType type, Colour colour, bool isfilled, float size, bool is
 			vertices.push_back(vertex);
 		}
 	}
-	else
+	else //Constructed a randomly distorted shape for "Random Any" shape draw configuration
 	{
 		vertices.clear();
 		int definition = ShapeSize * 16 + Random::RandomRange(4, 12);

@@ -1,9 +1,6 @@
-#include "Vector2f.h"
 #include "stdafx.h"
-
-const Vector2f Top(0 , 1);
-const Vector2f Bottom(0, -1);
-
+#include "Vector2f.h"
+//Global holder for current mouse position
 Vector2f Vector2f::MousePosition;
 
 Vector2f::Vector2f()
@@ -17,7 +14,7 @@ Vector2f::Vector2f(float x, float y)
 	X = x;
 	Y = y;
 }
-
+//Update mouse position to GL coordinates
 void Vector2f::ConvertMouseCoordinates(int x, int y, int width, int height)
 {
 	//Normalise pixels and fix offsets
@@ -27,7 +24,12 @@ void Vector2f::ConvertMouseCoordinates(int x, int y, int width, int height)
 	MousePosition.Y = normaliseyWinPos > 1 ? ((0 - (1 - normaliseyWinPos)) * -1) : abs(normaliseyWinPos - 1);
 	Debug::Log("Mouse Position", MousePosition.ToString());
 }
-
+//Get a string representation for debug
+std::string Vector2f::ToString()
+{
+	return std::to_string(X) + " " + std::to_string(Y);
+}
+//Operator behaviours
 Vector2f operator+(Vector2f left, Vector2f right)
 {
 	Vector2f result;

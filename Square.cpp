@@ -8,7 +8,7 @@ Square::Square(ShapeType type, Colour colour, bool isfilled, float size)
 	IsFilled = isfilled;
 	ShapeSize = size;
 	lineWidth = ShapeSize < 0.1 ? 1 : 2;
-
+	//Calculate the vertices based on the size and position
 	topLeft = topLeft * ShapeSize + position;
 	topright = topright * ShapeSize + position;
 	bottomleft = bottomleft * ShapeSize + position;

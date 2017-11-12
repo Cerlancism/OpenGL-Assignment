@@ -1,5 +1,5 @@
 #pragma once
-
+//Debug class for displaying output in the visual studio output environment
 class Debug
 {
 public:
