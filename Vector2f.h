@@ -28,5 +28,3 @@ Vector2f operator*(Vector2f value, float multiplier);
 Vector2f operator*(float multiplier, Vector2f value);
 
 Vector2f operator/(Vector2f value, float divider);
-
-Vector2f operator/(float divider, Vector2f value);

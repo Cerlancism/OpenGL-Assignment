@@ -67,12 +67,5 @@ Vector2f operator/(Vector2f value, float divider)
 	return value;
 }
 
-Vector2f operator/(float divider, Vector2f value)
-{
-	value.X /= divider;
-	value.Y /= divider;
-	return value;
-}
-
 Vector2f::~Vector2f()
 {}
