@@ -51,7 +51,7 @@ Shape::Shape(ShapeType type, Colour colour, Fill fillmode, Size size)
 			sizevalue = sizepool[Random::RandomRange(0, 2)];
 			break;
 		case Size::RANDOMANY://Generate total random fixed size from a range
-			sizevalue = Random::RandomRange(0.01f, 0.5f);
+			sizevalue = Random::RandomRange(0.01f, 0.2f);
 			break;
 	}
 	switch (type)
