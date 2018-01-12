@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "Triangle.h"
 
-Triangle::Triangle(ShapeType type, Colour colour, bool isfilled, float size)
+Triangle::Triangle(Colour colour, bool isfilled, float size)
 {
-	Type = type;
+	Type = Shape::ShapeType::TRIANGLE;
 	ShapeColour = colour;
 	IsFilled = isfilled;
 	ShapeSize = size;

@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "Circle.h"
 
-Circle::Circle(ShapeType type, Colour colour, bool isfilled, float size, bool isdistorted)
+Circle::Circle(Colour colour, bool isfilled, float size, bool isdistorted)
 {
-	Type = type;
+	Type = Shape::ShapeType::CIRCLE;
 	ShapeColour = colour;
 	IsFilled = isfilled;
 	ShapeSize = size;

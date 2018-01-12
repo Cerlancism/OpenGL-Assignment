@@ -7,7 +7,7 @@ class Shape
 {
 public:
 	//Configuration enums for what type of shapes can construct
-	enum class ShapeType { SQURE, TRIANGLE, CIRCLE, RANDOM, RANDOMANY };
+	enum class ShapeType { SQURE, TRIANGLE, CIRCLE, DIAMOND, RANDOM, RANDOMANY };
 	enum class Fill { FILLED, WIREFRAME, RANDOM };
 	enum class Size { SMALL, MEDIUM, LARGE, RANDOM, RANDOMANY};
 	//Glocalised holder pointing to all the constructed shapes

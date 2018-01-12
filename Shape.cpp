@@ -3,6 +3,7 @@
 #include "Square.h"
 #include "Triangle.h"
 #include "Circle.h"
+#include "Diamond.h"
 
 std::vector<Shape*> Shape::List;
 
@@ -57,19 +58,23 @@ Shape::Shape(ShapeType type, Colour colour, Fill fillmode, Size size)
 	switch (type)
 	{//Construct the derived shapes base on the type and add to the global shape pointer list
 		case ShapeType::SQURE:
-			List.push_back(new Square(type, colour, isfill, sizevalue));
+			List.push_back(new Square(colour, isfill, sizevalue));
 			break;
 
 		case ShapeType::TRIANGLE:
-			List.push_back(new Triangle(type, colour, isfill, sizevalue));
+			List.push_back(new Triangle(colour, isfill, sizevalue));
 			break;
 
 		case ShapeType::CIRCLE:
-			List.push_back(new Circle(type, colour, isfill, sizevalue, false));
+			List.push_back(new Circle(colour, isfill, sizevalue, false));
+			break;
+
+		case ShapeType::DIAMOND:
+			List.push_back(new Diamond(colour, isfill, sizevalue));
 			break;
 
 		case ShapeType::RANDOMANY:
-			List.push_back(new Circle(type, colour, isfill, sizevalue, true));
+			List.push_back(new Circle(colour, isfill, sizevalue, true));
 			break;
 	}
 }

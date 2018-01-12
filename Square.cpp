@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "Square.h"
 
-Square::Square(ShapeType type, Colour colour, bool isfilled, float size)
+Square::Square(Colour colour, bool isfilled, float size)
 {
-	Type = type;
+	Type = Shape::ShapeType::DIAMOND;
 	ShapeColour = colour;
 	IsFilled = isfilled;
 	ShapeSize = size;

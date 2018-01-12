@@ -149,6 +149,7 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Colour.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="Diamond.h" />
     <ClInclude Include="IGRA_LAB.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="resource.h" />
@@ -163,6 +164,7 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Colour.cpp" />
     <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="Diamond.cpp" />
     <ClCompile Include="IGRA_LAB.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="Shape.cpp" />

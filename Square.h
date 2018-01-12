@@ -4,7 +4,7 @@
 class Square : public Shape
 {
 public:
-	Square(ShapeType type, Colour colour, bool isfilled, float size);
+	Square(Colour colour, bool isfilled, float size);
 
 	void Draw() override;
 

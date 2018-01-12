@@ -5,7 +5,7 @@
 class Triangle : public Shape
 {
 public:
-	Triangle(ShapeType type, Colour colour, bool isfilled, float size);
+	Triangle(Colour colour, bool isfilled, float size);
 
 	void Draw() override;
 

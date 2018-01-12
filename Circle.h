@@ -4,7 +4,7 @@
 class Circle : public Shape
 {
 public:
-	Circle(ShapeType type, Colour colour, bool isfilled, float size, bool isdistorted);
+	Circle(Colour colour, bool isfilled, float size, bool isdistorted);
 
 	void Draw() override;
 
